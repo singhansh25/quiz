@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Quiz App</h1>
+        <div id="category-selection">
+            <label for="category">Select a category:</label>
+            <select id="category">
+                <option value="anime">Anime</option>
+                <option value="movies">Movies</option>
+                <option value="mythology">Mythology</option>
+                <option value="history">History</option>
+                <option value="news">News</option>
+                <option value="sports">Sports</option>
+                <option value="music">Music</option>
+                <option value="gaming">Gaming</option>
+            </select>
+            <button onclick="startQuiz()">Start Quiz</button>
+        </div>
+        <div id="quiz" style="display: none;">
+            <p id="question"></p>
+            <div id="options">
+                <!-- Options will be populated dynamically with JavaScript -->
+            </div>
+            <button onclick="loadQuestion()">Next</button>
+
+        </div>
+        <div id="review" style="display: none;">
+            <h2>Review</h2>
+            <!-- Results and review section will be displayed here -->
+            <button onclick="restartQuiz()">Restart</button>
+        </div>
+    </div>
+
+    <script src="quiz.js"></script>
+</body>
+</html>
